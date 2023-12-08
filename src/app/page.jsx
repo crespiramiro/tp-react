@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import HeroImg from '@/components/HeroImg'
 import Navbar from '@/components/Navbar'
 import Carrusel from '@/components/productos/Carrusel'
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroImg />
       <ProductsContainer />
       <Carrusel />
+      <Footer />
     </main>
   )
 }
