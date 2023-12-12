@@ -7,7 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      fontFamily: {
+        "dancingscript": ['Dancing Script', 'cursive']
+      }
     },
   },
   plugins: [],
