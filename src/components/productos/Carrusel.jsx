@@ -17,7 +17,7 @@ import img4 from "../../assets/imagenes/idea 4.webp"
 import img5 from "../../assets/imagenes/idea 5.webp"
 function Carrusel() {
     return (
-       <div>
+       <div className="pt-40">
         <div> 
             <h1 className={`text-3xl ${dancing.className} text-center underline`} >Ideas con ceramica</h1>
             <h2 className="text-xl text-center font-serif">Te dejamos unas ideas para decorar tu casa con estilo.</h2>
