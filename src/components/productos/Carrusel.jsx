@@ -10,10 +10,10 @@ const dancing = Dancing_Script({subsets: ['latin']})
 
 
 
-import img1 from "../../assets/imagenes/idea1.webp"
+import img1 from "../../assets/imagenes/idea 1.webp"
 import img2 from "../../assets/imagenes/idea 2.webp"
 import img3 from "../../assets/imagenes/idea 3.webp"
-import img4 from "../../assets/imagenes/idea 4.webp"
+import img4 from "../../assets/imagenes/idea 4.jpg"
 import img5 from "../../assets/imagenes/idea 5.webp"
 import img6 from "../../assets/imagenes/idea 6.jpg"
 import img7 from "../../assets/imagenes/idea 7.jpg"
@@ -33,56 +33,64 @@ function Carrusel() {
 <div>
     <Image src={img1} 
     alt={"Idea 1"}
-    layout="responsive" />
+    layout="responsive"
+    className="pp" />
 </div>
 <div>
 <Image src={img2} 
     height={50} 
     width={50}
     alt={"Idea 2"}
-    layout="responsive" />
+    layout="responsive" 
+    className="pp"/>
 </div>
 <div>
 <Image src={img3} 
     height={50} 
     width={50}
     alt={"Idea 3"}
-    layout="responsive" />
+    layout="responsive"
+    className="imagencentrada" />
 </div>
 <div>
 <Image src={img4} 
     height={50} 
     width={50}
     alt={"Idea 4"}
-    layout="responsive" />
+    layout="responsive"
+    className="pp" />
 </div>
 <div>
 <Image src={img5} 
     height={50} 
     width={50}
     alt={"Idea 5"}
-    layout="responsive" />
+    layout="responsive"
+    className="pp" />
 </div>
 <div>
 <Image src={img6} 
     height={50} 
     width={50}
     alt={"Idea 6"}
-    layout="responsive" />
+    layout="responsive"
+    className="pp"  />
 </div>
 <div>
 <Image src={img7} 
     height={50} 
     width={50}
     alt={"Idea 7"}
-    layout="responsive" />
+    layout="responsive"
+    className="imagencentrada"/>
 </div>
 <div>
 <Image src={img8} 
     height={50} 
     width={50}
     alt={"Idea 8"}
-    layout="responsive" />
+    layout="responsive"
+   className="imagencentrada" />
 </div>
 <div>
 <Image src={img9} 
@@ -96,7 +104,8 @@ function Carrusel() {
     height={50} 
     width={50}
     alt={"Idea 10"}
-    layout="responsive" />
+    layout="responsive"
+    className="pp" />
 </div>
 
 </Carousel>
