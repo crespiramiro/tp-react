@@ -1,0 +1,96 @@
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  height: 500px;
+  background-color: black;
+}
+
+.grid {
+
+  display: grid;
+  background: rgb(177, 125, 250);
+  grid-template-columns: 3fr 1fr;
+  padding: 2.5rem 0;
+  font-size: 1.1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+}
+
+.gridinfo {
+  max-width: 90%;
+  margin-left: 5rem;
+}
+
+.imagecontainer {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.logo1 {
+  object-fit: cover;
+  height: 140px;
+  margin-right: 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.gridcontactmedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gridcontactmedia div ul {
+  list-style: none;
+}
+
+.gridcontactmedia div ul li {
+  line-height: 1.5rem;
+  margin-left: 2.2rem;
+}
+
+.gridcontactmedia div ul li:hover {
+  color: grey;
+}
+
+.gridcontactmedia div img {
+  width: 20px;
+  margin-right: 1.2rem;
+}
+
+.gridicons {
+  display: flex;
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+
+.fatwitter:hover {
+  color: rgb(211, 89, 211);
+}
+
+.fafacebook:hover {
+  color: rgb(211, 89, 211);
+}
+
+.fainstagram:hover {
+  color: rgb(211, 89, 211);
+}
+
+h3 {
+  text-align: justify;
+}
+
+@media screen and (max-width: 786px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-info {
+    max-width: 80%;
+    margin-left: 2rem;
+  }
+}
