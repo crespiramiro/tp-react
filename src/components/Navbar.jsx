@@ -8,15 +8,12 @@ import {
   AiOutlineClose,
 } from "react-icons/ai";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 function Navbar() {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
-
-  const router = useRouter();
 
   return (
     <nav className="flex flex-row justify-around h-auto bg-green-800 py-8 text-white ">
@@ -25,16 +22,16 @@ function Navbar() {
       </div>
       <ul className="font-semibold hidden lg:flex lg:flex-row gap-x-12 text-xl md:text-2xl items-center justify-center ">
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <a href="#"></a>Inicio
+          <Link href="#inicio" >Inicio</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <a href="#"></a>Sobre Nosotros
+         <Link href="#nosotros" >Sobre Nosotros</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <a href="#"></a>Productos
+          <Link href="#productos" >Productos</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <a href="#"></a>Taller
+          <Link href="#taller" >Taller</Link>
         </li>
       </ul>
       <div className="icons hidden lg:flex lg:flex-row gap-x-6 items-center ">

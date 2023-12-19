@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className='h-screen w-full overflow-x-hidden' >
+    <main className='h-screen w-full overflow-x-hidden scroll-smooth ' >
       <Navbar />
       <HeroImg />
       <Nosotros/>
