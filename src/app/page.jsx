@@ -10,13 +10,12 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className='h-screen w-full overflow-x-hidden bg-green-100' >
+    <main className='h-screen w-full overflow-x-hidden' >
       <Navbar />
       <HeroImg />
       <Nosotros/>
       <ProductsContainer />
       <Carrusel />
-      <NuevaColeccion/>
       <Taller />
     </main>
   )

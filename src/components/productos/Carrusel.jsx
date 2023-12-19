@@ -24,10 +24,9 @@ import img10 from "../../assets/imagenes/idea 10.jpg"
 
 function Carrusel() {
     return (
-       <div className="pt-40">
+       <div className="pt-28">
         <div> 
-            <h1 className={`text-3xl ${dancing.className} text-center underline`} >Ideas con ceramica</h1>
-            <h2 className="text-xl text-center font-serif">Te dejamos unas ideas para decorar tu casa con estilo.</h2>
+            <h2 className="text-3xl pb-6 font-semibold text-center">Te dejamos algunas ideas de nuestra ultima coleccion para que te inspires</h2>
         </div>
 <Carousel className="mainslide">
 <div>
