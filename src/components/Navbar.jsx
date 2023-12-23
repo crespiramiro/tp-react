@@ -43,29 +43,32 @@ function Navbar() {
       </div>
 
       <div className="block lg:hidden text-3xl " onClick={handleNav}>
-        {nav ? <AiOutlineClose /> : <AiOutlineMenu />}
+        {nav ? null : <AiOutlineMenu />}
       </div>
 
       <nav
         className={
           nav
-            ? " z-50 fixed flex-col gap-y-6 p-6 left-0 top-0 text-black w-[75%] h-full border-r-2 border-green-400 bg-white  ease-in-out duration-500 "
+            ? " z-50 fixed flex-col gap-y-6 p-6 left-0 top-0 text-black w-[75%] md:w-[55%] h-full border-r-2 border-green-400 bg-white transition-all  ease-in-out duration-500 "
             : " hidden fixed left-[-100%]"
         }
       >
-        <h2 className=" text-4xl font-extrabold"> Ceramica Viva </h2>
+        <div className="flex flex-row items-center gap-x-3" >
+        <h2 className=" text-3xl font-extrabold"> Ceramica Viva </h2>
+          <AiOutlineClose size={35} onClick={handleNav} />
+        </div>
         <ul className="uppercase pt-4 mt-2 ">
-          <li className="py-6 text-2xl ">
-            <a href="#">Inicio</a>
+          <li className="py-6 text-lg ">
+            <Link href="#inicio">Inicio</Link>
           </li>
-          <li className="py-6 text-2xl ">
-            <a href="#">Sobre Nosotros</a>
+          <li className="py-6 text-lg ">
+          <Link href="#nosotros" >Sobre Nosotros</Link>
           </li>
-          <li className="py-6 text-2xl ">
-            <a href="#">Nuestros Productos</a>
+          <li className="py-6 text-lg ">
+            <Link href="#productos" >Nuestros Productos</Link>
           </li>
-          <li className="py-6 text-2xl ">
-            <a href="#">Taller</a>
+          <li className="py-6 text-lg ">
+              <Link href="#taller" >Taller</Link>
           </li>
         </ul>
         <ul className="icon-container lg:hidden flex flex-row gap-x-4 pt-4 mt-2  text-2xl md:text-4xl ">
