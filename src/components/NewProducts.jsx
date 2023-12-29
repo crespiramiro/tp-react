@@ -26,7 +26,7 @@ export default function NewProducts(){
         <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-4 gap-y-8 " >
             {productos.map((producto => (
                 <div key={producto.id} className="h-auto flex flex-col gap-y-1 w-auto rounded-lg shadow-lg justify-center items-center mx-4 " >
-                <img src={producto.img} alt={producto.name} className="rounded-md pb-1 h-40 object-cover"loading="lazy"/>
+                <img src={producto.img} alt={producto.name} className="rounded-md pb-1 h-90 object-cover"loading="lazy"/>
                 <h2 className="text-center lg:text-2xl font-semibold " >{producto.name}</h2>
                 <div className="prices p-1 flex flex-row gap-x-2 justify-center ">
                     <h3 className="text-green-600 lg:text-xl " >{producto.price}</h3>
