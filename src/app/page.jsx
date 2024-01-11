@@ -8,6 +8,7 @@ import NuevaColeccion from '@/components/productos/NuevaColeccion'
 import Taller from '@/components/productos/Taller'
 import Image from 'next/image'
 import NewProducts from '@/components/newProducts'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Nosotros/>
       <Carrusel />
       <Taller />
+      <Footer/>
     </main>
   )
 }
