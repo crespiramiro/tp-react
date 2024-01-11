@@ -22,16 +22,16 @@ function Navbar() {
       </div>
       <ul className="font-semibold hidden lg:flex lg:flex-row gap-x-12 text-xl md:text-2xl items-center justify-center ">
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <Link href="#inicio" >Inicio</Link>
+          <Link href="#inicio">Inicio</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-         <Link href="#nosotros" >Sobre Nosotros</Link>
+          <Link href="#nosotros">Sobre Nosotros</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <Link href="#productos" >Productos</Link>
+          <Link href="#productos">Productos</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <Link href="#taller" >Taller</Link>
+          <Link href="#taller">Taller</Link>
         </li>
       </ul>
       <div className="icons hidden lg:flex lg:flex-row gap-x-6 items-center ">
@@ -53,8 +53,8 @@ function Navbar() {
             : " hidden fixed left-[-100%]"
         }
       >
-        <div className="flex flex-row items-center gap-x-3" >
-        <h2 className=" text-3xl font-extrabold"> Ceramica Viva </h2>
+        <div className="flex flex-row items-center gap-x-3">
+          <h2 className=" text-3xl font-extrabold"> Ceramica Viva </h2>
           <AiOutlineClose size={35} onClick={handleNav} />
         </div>
         <ul className="uppercase pt-4 mt-2 ">
@@ -62,13 +62,13 @@ function Navbar() {
             <Link href="#inicio">Inicio</Link>
           </li>
           <li className="py-6 text-lg ">
-          <Link href="#nosotros" >Sobre Nosotros</Link>
+            <Link href="#nosotros">Sobre Nosotros</Link>
           </li>
           <li className="py-6 text-lg ">
-            <Link href="#productos" >Nuestros Productos</Link>
+            <Link href="#productos">Nuestros Productos</Link>
           </li>
           <li className="py-6 text-lg ">
-              <Link href="#taller" >Taller</Link>
+            <Link href="#taller">Taller</Link>
           </li>
         </ul>
         <ul className="icon-container lg:hidden flex flex-row gap-x-4 pt-4 mt-2  text-2xl md:text-4xl ">
