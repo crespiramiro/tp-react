@@ -1,5 +1,5 @@
 import Image from "next/image"
-/* import img13 from "../../assets/imagenes/taller.jpg" */
+import img13 from "../../assets/imagenes/taller.jpg"
 import "./stylescarousel.css";
 function Taller (){
     return (
@@ -17,9 +17,9 @@ function Taller (){
          Mantenemos distancia. El espacio es amplio y lo mantenemos ventilado.</p>
         </div>
         <div className="imagentaller">
-        {/* <Image src={img13} 
+        <Image src={img13} 
     alt={"taller"}
-    layout="responsive" /> */}
+    layout="responsive" />
        </div>
             </div>
        
