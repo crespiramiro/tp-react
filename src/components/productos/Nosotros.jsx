@@ -1,5 +1,4 @@
-import Image from "next/image"
-import img12 from "../../assets/imagenes/quienessomos.png"
+
 function Nosotros(){
     return (
     <div id="nosotros" className=" bg-cyan-950 text-white text-center py-16 px-[10%]" >

@@ -6,7 +6,7 @@ import Carrusel from '@/components/productos/Carrusel.jsx'
 import Nosotros from '@/components/productos/Nosotros'
 import NuevaColeccion from '@/components/productos/NuevaColeccion'
 import Taller from '@/components/productos/Taller'
-import Taller from '@/components/productos/Ventajas'
+import Ventajas from '@/components/productos/Ventajas'
 import Image from 'next/image'
 import NewProducts from '@/components/newProducts'
 
