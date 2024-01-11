@@ -9,6 +9,7 @@ import Taller from '@/components/productos/Taller'
 import Ventajas from '@/components/productos/Ventajas'
 import Image from 'next/image'
 import NewProducts from '@/components/newProducts'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Carrusel />
       <Ventajas />
       <Taller />
+      <Footer/>
     </main>
   )
 }
