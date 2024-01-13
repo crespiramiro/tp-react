@@ -28,7 +28,7 @@ function Ventajas(){
     layout="responsive" />
         </div>
        <div className="caja1"> <h2 className="minititulos"> Amigable con la temperatura</h2> </div>
-   <div className="caja2"><p>
+   <div className="caja3"><p>
    Los platos de cerámica son amigables con el calor así que puede usarse para cocinar alimentos en la estufa, microondas y horno.
    Pero esto no significa que todas las cerámicas son resistentes al calor, solo algunas son aptas por lo cual hay que asegurarnos de
     que la vajilla que deseamos adquirir es apta para el calor.
@@ -42,7 +42,7 @@ function Ventajas(){
     layout="responsive" />
         </div>
        <div className="caja1"> <h2 className="minititulos"> Duración</h2> </div>
-   <div className="caja2"><p>
+   <div className="caja4"><p>
    La vajilla de cerámica es mejor conocida por su durabilidad, es duradera y no porosa. Aunque parecen frágiles, poseen una solidez suprema.
     </p></div>
        </div>
@@ -54,7 +54,7 @@ function Ventajas(){
     layout="responsive" />
         </div>
        <div className="caja1"> <h2 className="minititulos">No pegajoso</h2> </div>
-   <div className="caja2"><p>
+   <div className="caja5"><p>
    Se ha demostrado que la vajilla de cerámica no es pegajosa. Tiene una textura suave y vidriosa que ayuda a limpiar la vajilla con facilidad.
     Ya sea que este preparando un plato sobre utensilios de cocina de cerámica o comiendo en ellos, el utensilio se queda sin manchas. 
     Además, se pueden limpiar con mucha facilidad con solo aplicar agua y jabón.
@@ -68,7 +68,7 @@ function Ventajas(){
     layout="responsive" />
         </div>
        <div className="caja1"> <h2 className="minititulos">No contiene vinilo ni productos químicos</h2> </div>
-   <div className="caja2"><p>
+   <div className="caja6"><p>
    Los productos químicos y el plástico pueden tener un efecto adverso en nuestra salud ya que pueden ser dañinos para nuestro cuerpo.
 Mientras que algunas cerámicas son químicamente libres y pueden ser una buena opción para usted.
     </p></div>

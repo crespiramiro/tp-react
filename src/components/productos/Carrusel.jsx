@@ -28,12 +28,13 @@ function Carrusel() {
         <div> 
             <h2 className="text-3xl pb-6 font-semibold text-center">Te dejamos algunas ideas de nuestra ultima coleccion para que te inspires</h2>
         </div>
-<Carousel className="mainslide">
+        <div className="cajacarrusel">
+        <Carousel className="mainslide">
 <div>
     <Image src={img1} 
     alt={"Idea 1"}
     layout="responsive"
-    className="pp" />
+    className="mt-6" />
 </div>
 <div>
 <Image src={img2} 
@@ -41,7 +42,7 @@ function Carrusel() {
     width={50}
     alt={"Idea 2"}
     layout="responsive" 
-    className="pp"/>
+    className="mt-8"/>
 </div>
 <div>
 <Image src={img3} 
@@ -57,7 +58,7 @@ function Carrusel() {
     width={50}
     alt={"Idea 4"}
     layout="responsive"
-    className="pp" />
+    className="mt-9" />
 </div>
 <div>
 <Image src={img5} 
@@ -65,7 +66,7 @@ function Carrusel() {
     width={50}
     alt={"Idea 5"}
     layout="responsive"
-    className="pp" />
+    className="mt-16" />
 </div>
 <div>
 <Image src={img6} 
@@ -73,7 +74,7 @@ function Carrusel() {
     width={50}
     alt={"Idea 6"}
     layout="responsive"
-    className="pp"  />
+    className="mt-3"  />
 </div>
 <div>
 <Image src={img7} 
@@ -81,7 +82,7 @@ function Carrusel() {
     width={50}
     alt={"Idea 7"}
     layout="responsive"
-    className="imagencentrada"/>
+    className="mt-16"/>
 </div>
 <div>
 <Image src={img8} 
@@ -89,14 +90,15 @@ function Carrusel() {
     width={50}
     alt={"Idea 8"}
     layout="responsive"
-   className="imagencentrada" />
+   className="mt-16" />
 </div>
 <div>
 <Image src={img9} 
     height={50} 
     width={50}
     alt={"Idea 9"}
-    layout="responsive" />
+    layout="responsive"
+    className="mt-3" />
 </div>
 <div>
 <Image src={img10} 
@@ -109,6 +111,8 @@ function Carrusel() {
 
 </Carousel>
 </div>
+        </div>
+
     )
     
 }

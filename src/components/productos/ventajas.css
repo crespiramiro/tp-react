@@ -6,22 +6,46 @@
     color: forestgreen;
 }
 .caja1 {
-flex-shrink: 0;
+/* flex-shrink: 0; */
 }
 .caja2 {
-    width: 210px;
+   
 height: 163px;
 flex-shrink: 0;
 }
 .caja0 {
     width: 1500px;
-height: 450px;
+height: 450px; 
 
 }
 .todositems {
-    display: flex;
-   justify-content: space-around;
+     display: flex;
+  justify-content: space-around;
+
 }
+
+.items {
+ width: 200px;
+}
+
+@media screen and (max-width: 700px){
+    .todositems {
+display: grid;
+
+    } 
+    .caja0 {
+        width: 300px;
+        height: 1790px; 
+    } .caja2 {
+        height: 200px;
+        
+    } .caja3 {
+  height: 300px;
+ 
+    }
+}
+
+
 .icono {
     width: 40px;
     height: 40px;

@@ -2,14 +2,15 @@
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 .mainslide{
-margin-left: 510px;
 width: 30%;
-
 }
 
-.pp {
-  height: 600px !important;
+.cajacarrusel{
+  display: flex;
+ position: relative;
+ justify-content: center;
 }
+
 .imagencentrada {
 margin-top: 80px;
 }
