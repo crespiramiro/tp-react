@@ -10,7 +10,6 @@
 }
 
 .grid {
-
   display: grid;
   background: rgb(177, 125, 250);
   grid-template-columns: 3fr 1fr;

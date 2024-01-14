@@ -2,7 +2,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function NewProducts() {
+export default function NewProducts({
+  allProducts,
+  setAllProducts,
+  countProducts,
+  setCountProducts,
+  total,
+  setTotal,
+}) {
   const [productos, setProductos] = useState([]);
 
   const getData = async () => {
@@ -15,6 +22,21 @@ export default function NewProducts() {
   useEffect(() => {
     getData();
   }, []);
+
+  const onAddProduct = (product) => {
+    if (allProducts.find((item) => item.id === product.id)) {
+      const products = allProducts.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setTotal(total + product.price * product.quantity);
+      setCountProducts(countProducts + product.quantity);
+      return setAllProducts([...products]);
+    }
+
+    setTotal(total + product.price * product.quantity);
+    setCountProducts(countProducts + product.quantity);
+    setAllProducts([...allProducts, product]);
+  };
 
   return (
     <section id="productos" className="h-1/2 w-full">
@@ -42,7 +64,10 @@ export default function NewProducts() {
                 {producto.oldprice}
               </h3>
             </div>
-            <button className="bg-green-700 p-3 mb-4 rounded-md text-center ">
+            <button
+              onClick={() => onAddProduct(producto)}
+              className="bg-green-700 p-3 mb-4 rounded-md text-center "
+            >
               <p className="text-white font-semibold text-center lg:text-lg ">
                 Agregar al Carrito
               </p>
