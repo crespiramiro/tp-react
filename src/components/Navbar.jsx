@@ -22,11 +22,11 @@ function Navbar({
 
   const [active, setActive] = useState(false);
 
-  const onDeleteProduct = (product) => {
-    const results = allProducts.filter((item) => item.id !== product.id);
+  const onDeleteProduct = (products) => {
+    const results = allProducts.filter((item) => item.id !== products.id);
 
-    setTotal(total - product.price * product.quantity);
-    setCountProducts(countProducts - product.quantity);
+    setTotal(total - products.price * products.quantity);
+    setCountProducts(countProducts - products.quantity);
     setAllProducts(results);
   };
 
@@ -93,17 +93,17 @@ function Navbar({
             {allProducts.length ? (
               <>
                 <div className="row-product">
-                  {allProducts.map((product) => (
-                    <div className="cart-product" key={product.id}>
+                  {allProducts.map((products) => (
+                    <div className="cart-product" key={products.id}>
                       <div className="info-cart-product">
                         <span className="cantidad-producto-carrito">
-                          {product.quantity}
+                          {products.quantity}
                         </span>
                         <p className="titulo-producto-carrito">
-                          {product.nameProduct}
+                          {products.name}
                         </p>
                         <span className="precio-producto-carrito">
-                          ${product.price}
+                          ${products.price}
                         </span>
                       </div>
                       <svg
@@ -113,7 +113,7 @@ function Navbar({
                         strokeWidth="1.5"
                         stroke="currentColor"
                         className="icon-close"
-                        onClick={() => onDeleteProduct(product)}
+                        onClick={() => onDeleteProduct(products)}
                       >
                         <path
                           strokeLinecap="round"

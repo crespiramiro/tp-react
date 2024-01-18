@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { products } from "@/assets/db.json";
 import axios from "axios";
 
 export default function NewProducts({
@@ -23,19 +24,23 @@ export default function NewProducts({
     getData();
   }, []);
 
-  const onAddProduct = (product) => {
-    if (allProducts.find((item) => item.id === product.id)) {
+  ////////////////////////////////////////////////////////////////////
+
+  const onAddProduct = (products) => {
+    if (allProducts.find((item) => item.id === products.id)) {
       const products = allProducts.map((item) =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === products.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
       );
-      setTotal(total + product.price * product.quantity);
-      setCountProducts(countProducts + product.quantity);
+      setTotal(total + products.price * products.quantity);
+      setCountProducts(countProducts + products.quantity);
       return setAllProducts([...products]);
     }
 
-    setTotal(total + product.price * product.quantity);
-    setCountProducts(countProducts + product.quantity);
-    setAllProducts([...allProducts, product]);
+    setTotal(total + products.price * products.quantity);
+    setCountProducts(countProducts + products.quantity);
+    setAllProducts([...allProducts, products]);
   };
 
   return (
@@ -65,7 +70,7 @@ export default function NewProducts({
               </h3>
             </div>
             <button
-              onClick={() => onAddProduct(producto)}
+              onClick={() => onAddProduct(products)}
               className="bg-green-700 p-3 mb-4 rounded-md text-center "
             >
               <p className="text-white font-semibold text-center lg:text-lg ">
