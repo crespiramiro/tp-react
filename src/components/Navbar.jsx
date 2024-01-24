@@ -22,11 +22,14 @@ function Navbar({
 
   const [active, setActive] = useState(false);
 
-  const onDeleteProduct = (products) => {
-    const results = allProducts.filter((item) => item.id !== products.id);
+  const [productos, setProductos] = useState([]);
 
-    setTotal(total - products.price * products.quantity);
-    setCountProducts(countProducts - products.quantity);
+  const onDeleteProduct = (producto) => {
+    const results = allProducts.filter((item) => item.id !== producto.id);
+
+    const nuevoTotal = (total - producto.price * producto.quantity).toFixed(2);
+    setTotal(parseFloat(nuevoTotal));
+    setCountProducts(countProducts - producto.quantity);
     setAllProducts(results);
   };
 
@@ -93,17 +96,17 @@ function Navbar({
             {allProducts.length ? (
               <>
                 <div className="row-product">
-                  {allProducts.map((products) => (
-                    <div className="cart-product" key={products.id}>
+                  {allProducts.map((producto) => (
+                    <div className="cart-product" key={producto.id}>
                       <div className="info-cart-product">
                         <span className="cantidad-producto-carrito">
-                          {products.quantity}
+                          {producto.quantity}
                         </span>
                         <p className="titulo-producto-carrito">
-                          {products.name}
+                          {producto.name}
                         </p>
                         <span className="precio-producto-carrito">
-                          ${products.price}
+                          ${producto.price}
                         </span>
                       </div>
                       <svg
@@ -113,7 +116,7 @@ function Navbar({
                         strokeWidth="1.5"
                         stroke="currentColor"
                         className="icon-close"
-                        onClick={() => onDeleteProduct(products)}
+                        onClick={() => onDeleteProduct(producto)}
                       >
                         <path
                           strokeLinecap="round"

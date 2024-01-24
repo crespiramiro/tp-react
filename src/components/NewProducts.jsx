@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { products } from "@/assets/db.json";
 import axios from "axios";
 
 export default function NewProducts({
@@ -17,7 +16,7 @@ export default function NewProducts({
     const res = await axios.get("http://localhost:5050/products");
     const products = await res.data;
     setProductos(products);
-    console.log(products);
+    // console.log(products);
   };
 
   useEffect(() => {
@@ -26,23 +25,31 @@ export default function NewProducts({
 
   ////////////////////////////////////////////////////////////////////
 
-  const onAddProduct = (products) => {
-    if (allProducts.find((item) => item.id === products.id)) {
-      const products = allProducts.map((item) =>
-        item.id === products.id
+  const onAddProduct = (nuevoProducto) => {
+    if (allProducts.find((item) => item.id === nuevoProducto.id)) {
+      const productosActualizados = allProducts.map((item) =>
+        item.id === nuevoProducto.id
           ? { ...item, quantity: item.quantity + 1 }
           : item
       );
-      setTotal(total + products.price * products.quantity);
-      setCountProducts(countProducts + products.quantity);
-      return setAllProducts([...products]);
+      const nuevoTotal = (
+        total +
+        nuevoProducto.price * nuevoProducto.quantity
+      ).toFixed(2);
+      setTotal(parseFloat(nuevoTotal));
+      setCountProducts(countProducts + nuevoProducto.quantity);
+      return setAllProducts([...productosActualizados]);
     }
 
-    setTotal(total + products.price * products.quantity);
-    setCountProducts(countProducts + products.quantity);
-    setAllProducts([...allProducts, products]);
+    const nuevoTotal = (
+      total +
+      nuevoProducto.price * nuevoProducto.quantity
+    ).toFixed(2);
+    setTotal(parseFloat(nuevoTotal));
+    setCountProducts(countProducts + nuevoProducto.quantity);
+    setAllProducts([...allProducts, nuevoProducto]);
   };
-
+  ////////////////////////////////////////////////////////////////////
   return (
     <section id="productos" className="h-1/2 w-full">
       <h2 className=" text-2xl lg:text-4xl text-center py-8 font-bold ">
@@ -70,7 +77,7 @@ export default function NewProducts({
               </h3>
             </div>
             <button
-              onClick={() => onAddProduct(products)}
+              onClick={() => onAddProduct(producto)}
               className="bg-green-700 p-3 mb-4 rounded-md text-center "
             >
               <p className="text-white font-semibold text-center lg:text-lg ">
