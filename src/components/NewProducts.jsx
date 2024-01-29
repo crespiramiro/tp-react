@@ -1,6 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import React from "react";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Button } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function NewProducts({
   allProducts,
@@ -26,29 +30,50 @@ export default function NewProducts({
   ////////////////////////////////////////////////////////////////////
 
   const onAddProduct = (nuevoProducto) => {
-    if (allProducts.find((item) => item.id === nuevoProducto.id)) {
+    // Verificar si el producto ya está en el carrito
+    const productoExistente = allProducts.find(
+      (item) => item.id === nuevoProducto.id
+    );
+
+    if (productoExistente) {
+      // Actualizar la cantidad del producto existente
       const productosActualizados = allProducts.map((item) =>
         item.id === nuevoProducto.id
           ? { ...item, quantity: item.quantity + 1 }
           : item
       );
+
       const nuevoTotal = (
         total +
         nuevoProducto.price * nuevoProducto.quantity
       ).toFixed(2);
+
+      // Actualizar el estado con los productos actualizados
       setTotal(parseFloat(nuevoTotal));
       setCountProducts(countProducts + nuevoProducto.quantity);
-      return setAllProducts([...productosActualizados]);
-    }
+      setAllProducts(productosActualizados);
+    } else {
+      // Agregar el nuevo producto al carrito
+      const nuevoTotal = (
+        total +
+        nuevoProducto.price * nuevoProducto.quantity
+      ).toFixed(2);
 
-    const nuevoTotal = (
-      total +
-      nuevoProducto.price * nuevoProducto.quantity
-    ).toFixed(2);
-    setTotal(parseFloat(nuevoTotal));
-    setCountProducts(countProducts + nuevoProducto.quantity);
-    setAllProducts([...allProducts, nuevoProducto]);
+      setTotal(parseFloat(nuevoTotal));
+      setCountProducts(countProducts + nuevoProducto.quantity);
+      setAllProducts([...allProducts, nuevoProducto]);
+    }
+    setAbierto(false);
   };
+  ////////////////////////////////////////////////////////////////////
+  const [abierto, setAbierto] = useState(false);
+
+  const abrirModal = (producto) => {
+    setProductoSeleccionado(producto);
+    setAbierto(true);
+  };
+  const [productoSeleccionado, setProductoSeleccionado] = useState(null);
+
   ////////////////////////////////////////////////////////////////////
   return (
     <section id="productos" className="h-1/2 w-full">
@@ -77,16 +102,44 @@ export default function NewProducts({
               </h3>
             </div>
             <button
-              onClick={() => onAddProduct(producto)}
-              className="bg-green-700 p-3 mb-4 rounded-md text-center "
+              onClick={() => abrirModal(producto)}
+              className="bg-green-700 p-3 mb-4 rounded-md text-center"
             >
-              <p className="text-white font-semibold text-center lg:text-lg ">
+              <p className="text-white font-semibold text-center lg:text-lg">
                 Agregar al Carrito
               </p>
             </button>
           </div>
         ))}
       </div>
+      <Modal isOpen={abierto}>
+        <ModalHeader>Confirmacion de compra</ModalHeader>
+        <ModalBody>
+          {productoSeleccionado ? (
+            <>
+              <label htmlFor="texto">Desea confirmar la compra:</label>
+              {/* Puedes mostrar detalles del producto aquí si es necesario */}
+            </>
+          ) : (
+            <p>Error: productoSeleccionado es nulo</p>
+          )}
+        </ModalBody>
+        <ModalFooter>
+          {productoSeleccionado && (
+            <>
+              <Button
+                color="primary"
+                onClick={() => onAddProduct(productoSeleccionado)}
+              >
+                Confirmar
+              </Button>
+              <Button color="secondary" onClick={() => setAbierto(false)}>
+                Cancelar
+              </Button>
+            </>
+          )}
+        </ModalFooter>
+      </Modal>
     </section>
   );
 }
