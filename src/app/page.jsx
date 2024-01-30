@@ -1,14 +1,27 @@
+'use client'
 import HeroImg from '@/components/HeroImg'
 import Navbar from '@/components/Navbar'
-import ProductsContainer from '@/components/productos/ProductsContainer'
+import Carrusel from '@/components/productos/Carrusel.jsx'
+// import ProductsContainer from '@/components/productos/ProductsContainer'
+import Nosotros from '@/components/productos/Nosotros'
+import NuevaColeccion from '@/components/productos/NuevaColeccion'
+import Taller from '@/components/productos/Taller'
+import Ventajas from '@/components/productos/Ventajas'
 import Image from 'next/image'
+import NewProducts from '@/components/newProducts'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className='h-screen w-full overflow-x-hidden ' >
+    <main className='min-h-screen max-h-screen w-full overflow-x-hidden scroll-smooth ' >
       <Navbar />
       <HeroImg />
-      <ProductsContainer />
+      <NewProducts />
+      <Nosotros/>
+      <Carrusel />
+      <Ventajas />
+      <Taller />
+      <Footer/>
     </main>
   )
 }

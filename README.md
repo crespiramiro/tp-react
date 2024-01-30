@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+DESCRIPCION Y UTILIDAD DE LA RAMA: Ir agregando los cambios una vez que ya fueron probados en la rama dev propia del que hizo los cambios
+
 ## Getting Started
 
 First, run the development server:

@@ -1,0 +1,16 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.mainslide{
+width: 30%;
+}
+
+.cajacarrusel{
+  display: flex;
+ position: relative;
+ justify-content: center;
+}
+
+.imagencentrada {
+margin-top: 80px;
+}
