@@ -1,16 +1,36 @@
 {
-    "products": [
-        {
-            "id": 1, "name": "Taza de Ceramica", "price": "$4599", "oldprice": "$5799", "img": "productos/taza.webp"    
-        },
-        {
-            "id": 2, "name": "Florero", "price": "$7800", "oldprice": "$8999,99", "img": "productos/floreros.webp"    
-        },
-        {
-            "id": 3, "name": "Maceta", "price": "$12400", "oldprice": "$13800,99", "img": "productos/Maceta.webp"    
-        },
-        {
-            "id": 4, "name": "Juego de Te", "price": "$17599,99", "oldprice": "$19700,99", "img": "productos/te.webp"    
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Taza de Ceramica",
+      "price": 4599,
+      "oldprice": 5799,
+      "img": "productos/taza.webp",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Florero",
+      "price": 7800,
+      "oldprice": 8999.99,
+      "img": "productos/floreros.webp",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Maceta",
+      "price": 12400,
+      "oldprice": 13800.99,
+      "img": "productos/Maceta.webp",
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "name": "Juego de Te",
+      "price": 17599.99,
+      "oldprice": 19700.99,
+      "img": "productos/te.webp",
+      "quantity": 1
+    }
+  ]
 }

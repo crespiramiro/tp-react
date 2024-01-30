@@ -8,8 +8,36 @@ import {
   AiOutlineClose,
 } from "react-icons/ai";
 import Link from "next/link";
-function Navbar() {
+import "@/styles/NavCartStyles.css";
+
+function Navbar({
+  allProducts,
+  setAllProducts,
+  total,
+  countProducts,
+  setCountProducts,
+  setTotal,
+}) {
   const [nav, setNav] = useState(false);
+
+  const [active, setActive] = useState(false);
+
+  const [productos, setProductos] = useState([]);
+
+  const onDeleteProduct = (producto) => {
+    const results = allProducts.filter((item) => item.id !== producto.id);
+
+    const nuevoTotal = (total - producto.price * producto.quantity).toFixed(2);
+    setTotal(parseFloat(nuevoTotal));
+    setCountProducts(countProducts - producto.quantity);
+    setAllProducts(results);
+  };
+
+  const onCleanCart = () => {
+    setAllProducts([]);
+    setTotal(0);
+    setCountProducts(0);
+  };
 
   const handleNav = () => {
     setNav(!nav);
@@ -22,24 +50,98 @@ function Navbar() {
  </div>
       <ul className="font-semibold hidden lg:flex lg:flex-row gap-x-12 text-xl md:text-2xl items-center justify-center ">
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <Link href="#inicio" >Inicio</Link>
+          <Link href="#inicio">Inicio</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-         <Link href="#nosotros" >Sobre Nosotros</Link>
+          <Link href="#nosotros">Sobre Nosotros</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <Link href="#productos" >Productos</Link>
+          <Link href="#productos">Productos</Link>
         </li>
         <li className="hover:cursor-pointer hover:scale-105 ">
-          <Link href="#taller" >Taller</Link>
+          <Link href="#taller">Taller</Link>
         </li>
       </ul>
       <div className="icons hidden lg:flex lg:flex-row gap-x-6 items-center ">
         <AiOutlineSearch size={40} />
         <AiOutlineUser size={40} />
-        <Link href="/carrito">
-          <AiOutlineShoppingCart size={40} />
-        </Link>
+        {/* Comienza carrito--------------------------------------------------------------------------------------------------------------------- */}
+        <div className="container-icon">
+          <div
+            className="container-cart-icon"
+            onClick={() => setActive(!active)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="icon-cart"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              />
+            </svg>
+            <div className="count-products">
+              <span id="contador-productos">{countProducts}</span>
+            </div>
+          </div>
+
+          <div
+            className={`container-cart-products ${active ? "" : "hidden-cart"}`}
+          >
+            {allProducts.length ? (
+              <>
+                <div className="row-product">
+                  {allProducts.map((producto) => (
+                    <div className="cart-product" key={producto.id}>
+                      <div className="info-cart-product">
+                        <span className="cantidad-producto-carrito">
+                          {producto.quantity}
+                        </span>
+                        <p className="titulo-producto-carrito">
+                          {producto.name}
+                        </p>
+                        <span className="precio-producto-carrito">
+                          ${producto.price}
+                        </span>
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="icon-close"
+                        onClick={() => onDeleteProduct(producto)}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="cart-total">
+                  <h3>Total:</h3>
+                  <span className="total-pagar">${total}</span>
+                </div>
+
+                <button className="btn-clear-all" onClick={onCleanCart}>
+                  Vaciar Carrito
+                </button>
+              </>
+            ) : (
+              <p className="cart-empty">El carrito está vacío</p>
+            )}
+          </div>
+        </div>
       </div>
 
       <div className="block lg:hidden text-3xl " onClick={handleNav}>
@@ -53,8 +155,8 @@ function Navbar() {
             : " hidden fixed left-[-100%]"
         }
       >
-        <div className="flex flex-row items-center gap-x-3" >
-        <h2 className=" text-3xl font-extrabold"> Ceramica Viva </h2>
+        <div className="flex flex-row items-center gap-x-3">
+          <h2 className=" text-3xl font-extrabold"> Ceramica Viva </h2>
           <AiOutlineClose size={35} onClick={handleNav} />
         </div>
         <ul className="uppercase pt-4 mt-2 ">
@@ -62,13 +164,13 @@ function Navbar() {
             <Link href="#inicio">Inicio</Link>
           </li>
           <li className="py-6 text-lg ">
-          <Link href="#nosotros" >Sobre Nosotros</Link>
+            <Link href="#productos">Nuestros Productos</Link>
           </li>
           <li className="py-6 text-lg ">
-            <Link href="#productos" >Nuestros Productos</Link>
+            <Link href="#nosotros">Sobre Nosotros</Link>
           </li>
           <li className="py-6 text-lg ">
-              <Link href="#taller" >Taller</Link>
+            <Link href="#taller">Taller</Link>
           </li>
         </ul>
         <ul className="icon-container lg:hidden flex flex-row gap-x-4 pt-4 mt-2  text-2xl md:text-4xl ">
