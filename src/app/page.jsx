@@ -1,3 +1,4 @@
+
 "use client";
 import { useState } from "react";
 import HeroImg from "@/components/HeroImg";
@@ -35,7 +36,9 @@ export default function Home() {
       />
       <Nosotros />
       <Carrusel />
+      <Ventajas />
       <Taller />
+      <Footer/>
     </main>
   );
 }

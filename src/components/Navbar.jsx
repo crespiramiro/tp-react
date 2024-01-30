@@ -44,10 +44,10 @@ function Navbar({
   };
 
   return (
-    <nav className="flex flex-row justify-around h-auto bg-green-800 py-8 text-white ">
+    <nav className="flex flex-row justify-around h-auto bg-green-800 py-5 text-white ">
       <div className="logo">
-        <h1 className="font-extrabold text-2xl md:text-4xl ">Ceramica Viva</h1>
-      </div>
+<img src="logo.png" alt="Ceramica Viva" width={80} />     
+ </div>
       <ul className="font-semibold hidden lg:flex lg:flex-row gap-x-12 text-xl md:text-2xl items-center justify-center ">
         <li className="hover:cursor-pointer hover:scale-105 ">
           <Link href="#inicio">Inicio</Link>
