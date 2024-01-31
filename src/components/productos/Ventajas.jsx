@@ -9,7 +9,8 @@ function Ventajas(){
     return (
         <div className="caja0"> <h1 className="titulo">PRINCIPALES VENTAJAS DE <span className="color">USAR VAJILLAS DE CERÁMICA</span> </h1>
         <div className="todositems">
-        <div className="items">
+        <div className="items"> 
+        <div className="bloque1">
         <div className="icono">
         <Image src={img14} 
     alt={"icono"}
@@ -19,10 +20,13 @@ function Ventajas(){
    <div className="caja2"><p>
    La cerámica se ha utilizado durante millones de años y se considera saludable y segura para los alimentos. Se ha observado que los componentes que conforman la cerámica son considerados no tóxicos.
     </p></div>
+        </div>
+       
        </div>
 
        <div className="items">
-        <div className="icono">
+         <div className="bloque2">
+         <div className="icono">
         <Image src={img15} 
     alt={"icono"}
     layout="responsive" />
@@ -34,9 +38,12 @@ function Ventajas(){
     que la vajilla que deseamos adquirir es apta para el calor.
     </p></div>
        </div>
+       
+       </div>
 
-       <div className="items">
-        <div className="icono">
+       <div className="items"> 
+       <div className="bloque3">
+       <div className="icono">
         <Image src={img16} 
     alt={"icono"}
     layout="responsive" />
@@ -46,8 +53,11 @@ function Ventajas(){
    La vajilla de cerámica es mejor conocida por su durabilidad, es duradera y no porosa. Aunque parecen frágiles, poseen una solidez suprema.
     </p></div>
        </div>
+        
+       </div>
 
        <div className="items">
+        <div className="bloque4">
         <div className="icono">
         <Image src={img17} 
     alt={"icono"}
@@ -59,9 +69,12 @@ function Ventajas(){
     Ya sea que este preparando un plato sobre utensilios de cocina de cerámica o comiendo en ellos, el utensilio se queda sin manchas. 
     Además, se pueden limpiar con mucha facilidad con solo aplicar agua y jabón.
     </p></div>
+        </div>
+       
        </div>
 
        <div className="items">
+        <div className="bloque5">
         <div className="icono">
         <Image src={img18} 
     alt={"icono"}
@@ -72,6 +85,8 @@ function Ventajas(){
    Los productos químicos y el plástico pueden tener un efecto adverso en nuestra salud ya que pueden ser dañinos para nuestro cuerpo.
 Mientras que algunas cerámicas son químicamente libres y pueden ser una buena opción para usted.
     </p></div>
+        </div>
+       
        </div>
 
 
