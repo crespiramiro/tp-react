@@ -9,6 +9,8 @@ import NuevaColeccion from "@/components/productos/NuevaColeccion";
 import Taller from "@/components/productos/Taller";
 import Image from "next/image";
 import NewProducts from "@/components/newProducts";
+import Ventajas from "@/components/productos/Ventajas";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [allProducts, setAllProducts] = useState([]);
