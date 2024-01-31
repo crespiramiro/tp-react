@@ -44,7 +44,7 @@ function Navbar({
   };
 
   return (
-    <nav className="flex flex-row justify-around h-auto bg-green-800 py-5 text-white ">
+    <nav className="flex flex-row justify-around items-center h-auto bg-green-800 py-5 text-white ">
       <div className="logo">
 <img src="logo.png" alt="Ceramica Viva" width={80} />     
  </div>
@@ -157,7 +157,7 @@ function Navbar({
       >
         <div className="flex flex-row items-center gap-x-3">
           <h2 className=" text-3xl font-extrabold"> Ceramica Viva </h2>
-          <AiOutlineClose size={35} onClick={handleNav} />
+          <AiOutlineClose size={35} onClick={handleNav} className="flex items-center" />
         </div>
         <ul className="uppercase pt-4 mt-2 ">
           <li className="py-6 text-lg ">

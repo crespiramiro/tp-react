@@ -15,7 +15,7 @@ export default function Footer(){
           <li>Sucripcion</li>
           <li>Taller de Ceramica</li>
         </ul>
-        <div className="icons flex text-xl font-semibold flex-row gap-x-6" >
+        <div className="icons flex text-xl justify-center font-semibold flex-row gap-x-6" >
           <AiOutlineTwitter/>
           <AiOutlineFacebook />
           <AiOutlineInstagram />
