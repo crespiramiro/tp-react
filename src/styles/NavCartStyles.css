@@ -190,3 +190,8 @@
   transform: scale(1.03);
   border-radius: 0;
 }
+
+ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
