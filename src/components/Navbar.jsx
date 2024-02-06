@@ -46,8 +46,8 @@ function Navbar({
   return (
     <nav className="flex flex-row justify-around items-center h-auto bg-green-800 py-5 text-white ">
       <div className="logo">
-<img src="logo.png" alt="Ceramica Viva" width={80} />     
- </div>
+        <img src="logo.png" alt="Ceramica Viva" width={80} />
+      </div>
       <ul className="font-semibold hidden lg:flex lg:flex-row gap-x-12 text-xl md:text-2xl items-center justify-center ">
         <li className="hover:cursor-pointer hover:scale-105 ">
           <Link href="#inicio">Inicio</Link>
@@ -106,7 +106,8 @@ function Navbar({
                           {producto.name}
                         </p>
                         <span className="precio-producto-carrito">
-                          ${producto.price}
+                          {producto.symbol}
+                          {producto.price}
                         </span>
                       </div>
                       <svg
@@ -157,7 +158,11 @@ function Navbar({
       >
         <div className="flex flex-row items-center gap-x-3">
           <h2 className=" text-3xl font-extrabold"> Ceramica Viva </h2>
-          <AiOutlineClose size={35} onClick={handleNav} className="flex items-center" />
+          <AiOutlineClose
+            size={35}
+            onClick={handleNav}
+            className="flex items-center"
+          />
         </div>
         <ul className="uppercase pt-4 mt-2 ">
           <li className="py-6 text-lg ">
