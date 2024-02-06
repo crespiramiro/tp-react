@@ -96,8 +96,12 @@ export default function NewProducts({
               {producto.name}
             </h2>
             <div className="prices p-1 flex flex-row gap-x-2 justify-center ">
-              <h3 className="text-green-600 lg:text-xl ">{producto.price}</h3>
+              <h3 className="text-green-600 lg:text-xl ">
+                {producto.symbol}
+                {producto.price}
+              </h3>
               <h3 className="line-through opacity-50 lg:text-lg ">
+                {producto.symbol}
                 {producto.oldprice}
               </h3>
             </div>
