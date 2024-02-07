@@ -10,8 +10,7 @@ function Taller (){
         <div>
         <p className=" text-xl md:text-2xl font-semibold" >Nos encontramos en Avda. Alameda 59 </p>
         <p className=" text-xl md:text-2xl font-semibold" >Podes visitarnos para nuestras clases de ceramica o retirar tus pedidos.
-        <br /> Una vez por semana en el  taller. Se puede empezar en cualquier momento del año. Son clases grupales de hasta 6 / 7 p
-        ersonas para todos los niveles. La propuesta es personalizada, acompañamos y guiamos a cada un@ respetando sus intereses y sus
+        <br /> Una vez por semana en el  taller. Se puede empezar en cualquier momento del año. Son clases grupales de hasta 6 / 7 personas para todos los niveles. La propuesta es personalizada, acompañamos y guiamos a cada un@ respetando sus intereses y sus
          tiempos. La cuota mensual incluye materiales y horneadas. Concurrimos con delantal y toallita de mano propia, barbijo y alcohol. 
          
          Mantenemos distancia. El espacio es amplio y lo mantenemos ventilado.</p>
