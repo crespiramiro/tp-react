@@ -7,11 +7,9 @@
       },
       {
         "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": { "zeroConfig": true },
-        "build": {
-          "publish": "/",
-          "command": "npm run build && npm run json"
+        "use": "@vercel/node",
+        "config": {
+          "buildCommand": "npm run build && npm run json"
         }
       }
     ],
