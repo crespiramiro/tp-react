@@ -17,7 +17,7 @@ export default function NewProducts({
   const [productos, setProductos] = useState([]);
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:5050/products");
+    const res = await axios.get("https://my-json-server.typicode.com/crespiramiro/tp-api/products");
     const products = await res.data;
     setProductos(products);
     // console.log(products);
